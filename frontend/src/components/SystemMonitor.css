@@ -1,0 +1,97 @@
+.system-monitor-container {
+    background-color: #1e293b;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 100%;
+  }
+  
+  .system-monitor-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .system-monitor-header.error {
+    color: red;
+  }
+  
+  .system-monitor-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .system-monitor-status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+  
+  .system-monitor-status-indicator.loading {
+    background-color: gray;
+  }
+  
+  .system-monitor-status-indicator.connected {
+    background-color: green;
+  }
+  
+  .system-monitor-stat-item {
+    background-color: #2d3748;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .system-monitor-stat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .system-monitor-stat-label {
+    color: #a0aec0;
+    font-size: 0.875rem;
+  }
+  
+  .system-monitor-stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .system-monitor-progress-bar-container {
+    background-color: #4a5568;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+  }
+  
+  .system-monitor-progress-bar {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .system-monitor-time {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    text-align: right;
+    margin-top: 8px;
+  }
+  
+  .system-monitor-retry-button {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .system-monitor-retry-button:hover {
+    background-color: #2c5282;
+  }

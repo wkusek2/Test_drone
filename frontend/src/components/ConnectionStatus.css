@@ -1,0 +1,163 @@
+.connection-status {
+  position: fixed;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100001;
+  transition: opacity 0.3s ease;
+}
+
+/* Kontener dla spinnerów */
+.connection-status-spinner-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -100px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.connection-status-spinner-container.visible {
+  opacity: 1;
+}
+
+.connection-status-spinner-container.hidden {
+  opacity: 0;
+}
+
+/* Ikona sukcesu (ptaszek) */
+.connection-status-success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(76, 175, 80, 0.2);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ikona dla stanu łączenia */
+.connection-status-connecting-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ikona dla stanu ping */
+.connection-status-pinging-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spinner */
+.connection-status-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.connection-status-spinner-blue {
+  border-top: 4px solid #3498db;
+}
+
+.connection-status-spinner-yellow {
+  border-top: 4px solid #ffc107;
+}
+
+/* Kontener tekstów */
+.connection-status-text-container {
+  margin-top: 70px;
+  position: relative;
+  min-height: 60px; /* Większa wysokość dla dodatkowego tekstu */
+  margin-right: 100px;
+
+}
+
+/* Style dla tekstów statusów */
+.connection-status-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  margin-top: 100px;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 200%;
+  left: 0;
+  right: 0;
+}
+
+.connection-status-text.visible {
+  opacity: 1;
+}
+
+.connection-status-text.hidden {
+  opacity: 0;
+}
+
+.connection-status-text.success {
+  color: #4CAF50;
+}
+
+.connection-status-text.error {
+  color: #f44336;
+}
+
+.connection-status-text.warning {
+  color: #FFC107;
+}
+
+/* Link "Połącz mimo to" */
+.connection-status-force-connect {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 8px;
+  color: #FFC107;
+}
+
+.connection-status-force-connect:hover {
+  color: #FFEB3B;
+}
+
+/* Styl dla informacji o pingu */
+.connection-status-ping-info {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.connection-status-ping-method {
+  font-size: 12px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Animacja obrotu */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

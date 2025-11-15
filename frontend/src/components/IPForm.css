@@ -1,0 +1,73 @@
+.ip-form {
+    width: 80%;
+    min-height: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    position: relative;
+  }
+  
+  .ip-form-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .ip-form-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .ip-form-input:focus {
+    outline: 2px solid #0066cc;
+    border-color: #0066cc;
+  }
+  
+  .ip-form-input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  .ip-form-button {
+    padding: 12px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .ip-form-button:hover:not(:disabled) {
+    background-color: #0055aa;
+  }
+  
+  .ip-form-button:active:not(:disabled) {
+    background-color: #004488;
+  }
+  
+  .ip-form-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Responsywność dla mniejszych ekranów */
+  @media (max-width: 768px) {
+    .ip-form {
+      width: 90%;
+    }
+    
+    .ip-form-container {
+      flex-direction: column;
+    }
+    
+    .ip-form-button {
+      margin-top: 10px;
+    }
+  }
